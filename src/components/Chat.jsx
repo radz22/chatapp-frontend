@@ -7,6 +7,7 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [receiveMessage, setReceiveMessage] = useState([]);
   const [user, setUser] = useState([]);
+  console.log(socket);
   useEffect(() => {
     socket.on("join", (data) => {
       setJoin([...join, data]);
